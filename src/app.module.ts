@@ -22,7 +22,8 @@ import { StudentModule } from './student/student.module';
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true,
+      autoSchemaFile: 'schema.gql',
+      installSubscriptionHandlers: true,
     }),
     LessonModule,
     StudentModule,
